@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: rgba(10, 56, 113,0.75);
+    background-color: rgba(29, 10, 113, 0.45);
 }
 
 .area_total {
@@ -20,16 +20,16 @@ body {
     margin: 0 auto;
     width: 1440px;
     height: 5px;
-    background-color: #0A3871;
+    background-color: rgba(29, 10, 113, 0.75);
 }
 
 #inserir_texto {
     margin: 10.5rem 0 0 15rem;
     border: none;
+    resize: none;
     background: #F3F5FC;
     width: 42.5rem;
-    height: 20rem;
-    resize: none;
+    height: 35rem;
     color: #0A3871;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
@@ -124,14 +124,21 @@ body {
 .mensagem {
     display: block;
     width: 336px;
-    height: 600px;
+    height: 781px;
     margin: 0 auto;
+    border: none;
+    resize: none;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 1.75rem;
     line-height: 120%;
     text-transform: lowercase;
     color: rgba(10, 56, 113,0.85);
+}
+
+.mensagem:focus {
+    outline: none !important;
+    border: none;
 }
 
 .botao_copiar {
@@ -147,7 +154,7 @@ body {
     font-weight: 700;
     border: 1px solid #0A3871;
     background: #FFFFFF;
-    margin-top: 203px;
+    margin-top: 22px;
 }
 
 .resultado {
@@ -186,12 +193,12 @@ footer {
     margin: 0 auto;
     width: 1440px;
     height: 55px;
-    background-color: #0A3871;
+    background-color: rgba(29, 10, 113, 0.75);
 }
 
 footer p {
     padding: 0.75rem;
-    color: #e4f0ff;
+    color: rgb(228, 221, 255);
     font-family: 'Inter', sans-serif;
     font-size: 0.75rem;
     text-align: center;
