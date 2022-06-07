@@ -36,8 +36,6 @@ function validaCaractere() {
         var colchetes = /[\[\]\{\}´]/;
         if(!(caracteres.test(event.key)) || (colchetes.test(event.key))) {
             event.preventDefault();
-            this.value = "";
-            return false;
         }
     });
 }
