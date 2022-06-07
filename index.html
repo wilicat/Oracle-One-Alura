@@ -2,51 +2,42 @@
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
-        <title>Challenge 1 - Codificador e decodificador de texto</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Challenge 1 | Codificador e decodificador de texto</title>
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/index_style.css">
     </head>
 
     <body>
         <div class="tarja"></div>
-        <main class="area_total">
-            <img src="img/logo_alura.svg" alt="Logotipo da escola Alura" class="logo_alura">
-            <textarea name="inserir_texto" id="inserir_texto" placeholder="digite aqui o seu texto" maxlength="185" autofocus></textarea>
-
-
-            <div class="botao_frame">
-                <button class="botao_criptografar">Criptografar</button>
-                <button class="botao_descriptografar">Descriptografar</button>
-            </div>
-
-
-            <section class = "resultado">
-
-                <div class="container">
-                    <div class="mostra_texto">
-                        <textarea name="mensagem" id="mensagem" class="mensagem"></textarea>
-                        <button class="botao_copiar">Copiar</button></div>
-                    <div class="mostra_figura" >
-                        <img src="img/img_abertura.svg" alt="Ilustração de pessoa com lupa aguardando a digitação do texto">
-                        <h2>Nenhuma mensagem encontrada</h2>
-                        <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+        <main id="container">
+                <img src="img/logo_alura.svg" alt="Logotipo da escola Alura" class="logo_alura">
+                <section id = "coluna_esquerda">
+                    <textarea name="inserir_texto" id="inserir_texto" placeholder="digite aqui o seu texto" maxlength="185" autofocus></textarea>
+                    <div class="botao_frame">
+                        <button class="botao_criptografar">Criptografar</button>
+                        <button class="botao_descriptografar">Descriptografar</button>
                     </div>
-                </div>
-                
-                
+                </section>
 
-
-            </section>
-
-
+                <section id="coluna_direita">
+                    <div class="mensagem_total">
+                        <div class="mostra_figura" >
+                            <img src="img/img_abertura.svg" alt="Ilustração de pessoa com lupa aguardando a digitação do texto">
+                            <h2>Nenhuma mensagem encontrada</h2>
+                            <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+                        </div>
+                        <div class="mostra_mensagem">
+                            <textarea name="mensagem" id="mensagem" class="mensagem"></textarea>
+                            <button class="botao_copiar">Copiar</button>
+                        </div>
+                    </div>
+                </section>
         </main>
 
-        <script src="js/principal.js"></script>
-
-        <footer>
-            <p>Wilson Jorge Filho | Programa Oracle One - Alura | 2022</p>
+        <footer class="rodape">
+            <p>Wilson Jorge Filho | Challenge 1 | Decodificador | Programa Oracle One Alura | 2022</p>
         </footer>
-
+        <script src="js/principal.js"></script>
     </body>
-
 </html>
