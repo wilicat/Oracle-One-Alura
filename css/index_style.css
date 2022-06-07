@@ -4,33 +4,58 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: rgba(29, 10, 113, 0.45);
+html {
+    height: 100%;
 }
 
-.area_total {
-    position: relative;
-    margin: 0 auto;
-    background: #F3F5FC;
-    width: 1440px;
-    height: 1024px;
+body {
+    background-color: rgba(29, 10, 113, 0.45);
+    height: 100%;
 }
 
 .tarja {
-    margin: 0 auto;
-    width: 1440px;
-    height: 5px;
+    width: 100%;
+    height: 10px;
     background-color: rgba(29, 10, 113, 0.75);
 }
 
+#container {
+    position: relative;
+    width: 80vw;
+    height: 100vh;
+    background: #F3F5FC;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+
+.logo_alura {
+    position: absolute;
+    width: 40px;
+    height: 48px;
+    left: 40px;
+    top: 40px;
+}
+
+#coluna_esquerda {
+    margin-top: 40px;
+    width: 35%;
+    max-width: 600px;
+    min-width: 450px;
+    height: 90%;
+    max-height: 850px;
+    min-height: 700px;
+}
+
 #inserir_texto {
-    margin: 10.5rem 0 0 15rem;
+    width: 100%;
+    height: 75%;
+    background: #F3F5FC;
+    margin-top: 100px;
     border: none;
     resize: none;
-    background: #F3F5FC;
-    width: 42.5rem;
-    height: 35rem;
-    color: #0A3871;
+    color: rgba(10, 56, 113,0.85);
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 2.5rem;
@@ -38,35 +63,21 @@ body {
 }
 
 #inserir_texto::placeholder {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
     color: rgba(10, 56, 113,0.4);
     font-weight: 400;
     font-size: 2.5rem;
 }
 
 #inserir_texto:focus {
-    outline: none !important;
+    outline: none;
     border: none;
 }
 
-.logo_alura {
-    position: absolute;
-    width: 120px;
-    height: 48px;
-    left: 40px;
-    top: 40px;
-}
-
-.input_texto {
-    margin: 10.5rem 0 0 15rem;
-}
-
 .botao_frame {
-    position: absolute;
-    width: 680px;
-    height: 67px;
-    left: 240px;
-    top: 885px;
-    padding: 0;
+    width: 100%;
+    height: 68px;
 }
 
 .botao_criptografar, .botao_descriptografar {
@@ -75,17 +86,27 @@ body {
     text-align: center;
     font-size: 1rem;
     color:#FFFFFF;
-    width: 326px;
-    height: 67px;
+    width: 45%;
+    height: 68px;
     border-radius: 24px;
     border: none;
     padding: 0;
 }
 
 .botao_criptografar {
+    margin-right: 15px;
     background: #0A3871;
-    margin-right: 1.5rem;
     border: 1px solid #0A3871;
+}
+
+.botao_criptografar:hover {
+    background: rgb(198, 185, 255);
+    color: #0A3871;
+    font-weight: 700;
+}
+
+.botao_criptografar:active {
+    background: rgb(216, 207, 255);
 }
 
 .botao_descriptografar {
@@ -93,76 +114,31 @@ body {
     font-weight: 700;
     border: 1px solid #0A3871;
     background: #D8DFE8;
+    float: right;
 }
 
-.container {
-    width: 336px;
-    height: 864px;
-    margin: 40px auto 0;
-    position: relative;
+.botao_descriptografar:hover {
+    background: rgb(198, 185, 255);
 }
 
-.mostra_figura {
-    position: absolute;
-    top: 203px;
-    left: 0;
-    width: 336px;
-    height: 570px;
-    background-color: #FFFFFF;
+.botao_descriptografar:active {
+    background: rgb(216, 207, 255);
 }
 
-.mostra_texto {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 336px;
-    height: 864px;
-    background-color: #FFFFFF;
-    display: none;
+
+#coluna_direita {
+    margin-top: 40px;
+    width: 30%;
+    height: 90%;
+    max-width: 400px;
+    min-width: 350px;
+    max-height: 850px;
+    min-height: 700px;
 }
 
-.mensagem {
-    display: block;
-    width: 336px;
-    height: 781px;
-    margin: 0 auto;
-    border: none;
-    resize: none;
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 1.75rem;
-    line-height: 120%;
-    text-transform: lowercase;
-    color: rgba(10, 56, 113,0.85);
-}
-
-.mensagem:focus {
-    outline: none !important;
-    border: none;
-}
-
-.botao_copiar {
-    font-family: 'Inter', sans-serif;
-    font-weight: 500;
-    text-align: center;
-    font-size: 1rem;
-    width: 326px;
-    height: 67px;
-    border-radius: 24px;
-    margin: 400px auto 0;
-    color: #0A3871;
-    font-weight: 700;
-    border: 1px solid #0A3871;
-    background: #FFFFFF;
-    margin-top: 22px;
-}
-
-.resultado {
-    position: absolute;
-    width: 400px;
-    height: 944px;
-    left: 1000px;
-    top: 40px;
+.mensagem_total {
+    width: 100%;
+    height: 100%;
     border-radius: 32px;
     background-color: #FFFFFF;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
@@ -171,32 +147,94 @@ body {
     text-align: center;
 }
 
-.resultado img {
-    display: block;
+.mostra_figura {
+    margin: 0 auto;
+    padding: 50% 0;
+    width: 85%;
+    height: 100%;
 }
 
-.resultado h2 {
+.mostra_figura img {
+    display: block;
+    width: 100%;
+}
+
+.mostra_figura h2 {
     margin: 2rem 0rem 1rem;
     font-weight: 700;
     font-size: 1.5rem;
     line-height: 120%;
 }
 
-.resultado p {
+.mostra_figura p {
     margin: 0;
     font-weight: 400;
     font-size: 1rem;
     line-height: 150%;
 }
 
-footer {
+.mostra_mensagem {
     margin: 0 auto;
-    width: 1440px;
-    height: 55px;
-    background-color: rgba(29, 10, 113, 0.75);
+    width: 85%;
+    height: 100%;
+    display: none;
 }
 
-footer p {
+.mensagem {
+    width: 100%;
+    height: 83%;
+    margin: 32px auto 0;
+    border: none;
+    resize: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 1.75rem;
+    line-height: 120%;
+    text-transform: lowercase;
+    color: rgba(10, 56, 113,0.85);
+    background-color: #FFFFFF;
+}
+
+.mensagem:focus {
+    outline: none;
+    border: none;
+}
+
+
+.botao_copiar {
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    text-align: center;
+    font-size: 1rem;
+    width: 80%;
+    height: 68px;
+    border-radius: 24px;
+    color: #0A3871;
+    font-weight: 700;
+    border: 1px solid #0A3871;
+    background: #FFFFFF;
+}
+
+.botao_copiar:hover {
+    background: rgb(198, 185, 255);
+}
+
+.botao_copiar:active {
+    background: rgb(216, 207, 255);
+}
+
+.rodape {
+    margin: 0 auto;
+    width: 100%;
+    height: 45px;
+    background-color: rgba(29, 10, 113, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rodape p {
     padding: 0.75rem;
     color: rgb(228, 221, 255);
     font-family: 'Inter', sans-serif;
@@ -205,4 +243,233 @@ footer p {
     font-weight: 400;
     line-height: 150%;
     text-transform: uppercase;
+}
+
+/*-----responsive-----*/
+
+@media only screen and (max-width: 1200px) {
+
+    #container {
+        width: 100vw;
+    }
+
+}
+
+@media only screen and (max-width: 960px) {
+
+    body {
+        background-color: #F3F5FC;
+    }
+
+    #container {
+        width: 100vw;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }    
+
+    .logo_alura {
+        position: absolute;
+        width: 32px;
+        height: 38.4px;
+        top: 20px;
+        left: 20px;
+    }
+
+    #coluna_esquerda {
+        margin-top: 120px;
+        margin-bottom: 0;
+        align-self: center;
+        width: 90%;
+        height: 35%;
+        max-width: 800px;
+        min-width: 450px;
+        max-height: 450px;
+        min-height: 268px;
+    }
+
+    #inserir_texto {
+        margin: 0;
+        width: 100%;
+        height: 300px;
+        font-size: 2rem;
+    }
+
+    #inserir_texto::placeholder {
+        font-size: 2rem;
+    }
+
+    #coluna_direita {
+        margin: 0 auto 30px;
+        width: 350px;
+        max-width: 350px;
+        min-width: 350px;
+        height: 600px;
+        max-height: 600px;
+        min-height: 600px;
+    }
+
+    .mensagem_total {
+        width: 90%;
+        height: 100%;
+        border-radius: 28px;
+        margin: 0 auto;
+    }
+    
+    .mostra_figura {
+        padding: 25% 0;
+        width: 85%;
+        height: 100%;
+    }
+
+    .mostra_figura h2 {
+        font-size: 1.25rem;
+    }
+    
+    .mostra_figura p {
+        font-size: 0.8rem;
+        line-height: 125%;
+    }
+
+    .mostra_mensagem {
+        width: 90%;
+        height: 100%;
+        display: none;
+    }
+    
+    .mensagem {
+        width: 90%;
+        height: 77%;
+        margin: 28px auto 14px;
+        font-size: 1.5rem;
+    }
+
+    .rodape {
+        align-self: baseline;
+    }
+
+    .rodape p {
+        font-size: 0.6rem;
+    }
+
+}
+
+@media only screen and (max-width: 498px) {
+
+    body {
+        background-color: #F3F5FC;
+    }
+
+    #container {
+        width: 100vw;
+        min-width: 350px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }    
+
+    .logo_alura {
+        position: absolute;
+        width: 28px;
+        height: 33.6px;
+        top: 22px;
+        left: 10px;
+    }
+
+    #coluna_esquerda {
+        margin-top: 120px;
+        margin-bottom: 0;
+        align-self: center;
+        width: 90%;
+        height: 35%;
+        max-width: 400px;
+        min-width: 340px;
+        max-height: 450px;
+        min-height: 268px;
+    }
+
+    #inserir_texto {
+        margin: 0;
+        width: 100%;
+        height: 300px;
+        font-size: 1.5rem;
+    }
+
+    #inserir_texto::placeholder {
+        font-size: 1.5rem;
+    }
+
+    #coluna_direita {
+        margin: 0 auto 30px;
+        width: 350px;
+        max-width: 350px;
+        min-width: 350px;
+        height: 600px;
+        max-height: 600px;
+        min-height: 600px;
+    }
+
+    .mensagem_total {
+        width: 90%;
+        height: 100%;
+        border-radius: 28px;
+        margin: 0 auto;
+    }
+
+    .botao_frame {
+        width: 100%;
+        height: 150px;
+        margin: 0 auto;
+    }
+
+    .botao_criptografar, .botao_descriptografar {
+        font-size: 0.85rem;
+        width: 100%;
+        height: 60px;
+        margin: 5px auto;
+    }
+    
+    .mostra_figura {
+        padding: 25% 0;
+        width: 85%;
+        height: 100%;
+    }
+
+    .mostra_figura h2 {
+        font-size: 1.25rem;
+    }
+    
+    .mostra_figura p {
+        font-size: 0.8rem;
+        line-height: 125%;
+    }
+
+    .botao_copiar {
+        font-size: 0.85rem;
+        height: 60px;
+    }
+
+    .mostra_mensagem {
+        width: 90%;
+        height: 100%;
+        display: none;
+    }
+    
+    .mensagem {
+        width: 90%;
+        height: 77%;
+        margin: 28px auto;
+        font-size: 1.5rem;
+    }
+
+    .rodape {
+        align-self: baseline;
+    }
+
+    .rodape p {
+        font-size: 0.45rem;
+    }
+
 }
