@@ -1,6 +1,6 @@
 var inputTexto = document.querySelector("#inserir_texto");
 var mostraFigura = document.querySelector(".mostra_figura");
-var mostraTexto = document.querySelector(".mostra_texto");
+var mostraTexto = document.querySelector(".mostra_mensagem");
 var mensagem = document.querySelector(".mensagem");
 var botaoCriptografar = document.querySelector(".botao_criptografar");
 var botaoDescriptografar = document.querySelector(".botao_descriptografar");
@@ -36,9 +36,12 @@ function validaCaractere() {
         var colchetes = /[\[\]\{\}´]/;
         if(!(caracteres.test(event.key)) || (colchetes.test(event.key))) {
             event.preventDefault();
+            this.value = "";
+            return false;
         }
     });
 }
+
 
 /* - Função para a troca dos caracteres por strings com uma expressão regular */
 
